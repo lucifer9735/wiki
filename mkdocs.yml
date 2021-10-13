@@ -1,5 +1,8 @@
 site_name: FooWiki
-theme: material
+theme:
+  name: material
+  features:
+    - navigation.tabs
 
 markdown_extensions:
   - pymdownx.arithmatex:

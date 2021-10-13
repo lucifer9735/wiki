@@ -1,1 +1,1 @@
-# Welcome to FooWiki
+# Home
