@@ -1,0 +1,1051 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.3">
+    
+    
+      
+        <title>运算与函数 - FooWiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.5143246d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fractions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="FooWiki" class="md-header__button md-logo" aria-label="FooWiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FooWiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              运算与函数
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        LaTeX
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../github/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="md-tabs__link">
+        Github
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../markdown/" class="md-tabs__link">
+        Markdown
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="FooWiki" class="md-nav__button md-logo" aria-label="FooWiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    FooWiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          LaTeX
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="LaTeX" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          LaTeX
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        $\LaTeX$
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%A6%E5%8F%B7%E4%B8%8E%E5%AD%97%E6%AF%8D/" class="md-nav__link">
+        符号与字母
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          运算与函数
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        运算与函数
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fractions" class="md-nav__link">
+    分数 Fractions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#standard-numerical-functions" class="md-nav__link">
+    标准数值函数 Standard numerical functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#radicals" class="md-nav__link">
+    根式 Radicals
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differentials-and-derivatives" class="md-nav__link">
+    微分与导数 Differentials and Derivatives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modular-arithmetic" class="md-nav__link">
+    同余与模算术 Modular arithmetic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limits" class="md-nav__link">
+    极限 Limits
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bounds-and-projections" class="md-nav__link">
+    界限与投影 Bounds and Projections
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integral" class="md-nav__link">
+    积分 Integral
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#large-operators" class="md-nav__link">
+    其他大型运算 Large operators
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Github
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Github" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Github
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../github/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="md-nav__link">
+        常用命令
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Markdown
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Markdown" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Markdown
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../markdown/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fractions" class="md-nav__link">
+    分数 Fractions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#standard-numerical-functions" class="md-nav__link">
+    标准数值函数 Standard numerical functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#radicals" class="md-nav__link">
+    根式 Radicals
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differentials-and-derivatives" class="md-nav__link">
+    微分与导数 Differentials and Derivatives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modular-arithmetic" class="md-nav__link">
+    同余与模算术 Modular arithmetic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limits" class="md-nav__link">
+    极限 Limits
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bounds-and-projections" class="md-nav__link">
+    界限与投影 Bounds and Projections
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integral" class="md-nav__link">
+    积分 Integral
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#large-operators" class="md-nav__link">
+    其他大型运算 Large operators
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>运算与函数</h1>
+                
+                <h2 id="fractions">分数 Fractions</h2>
+<table>
+<thead>
+<tr>
+<th align="left">类型</th>
+<th align="left">样式</th>
+<th align="left">LaTeX</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">分数 Fractions</td>
+<td align="left"><span class="arithmatex">\(\frac{2}{4}x=0.5x\)</span></td>
+<td align="left">\frac{2}{4}x=0.5x or {2 \over 4}x=0.5x</td>
+</tr>
+<tr>
+<td align="left">小型分数 Small fractions (force \textstyle)</td>
+<td align="left"><span class="arithmatex">\(\tfrac{2}{4}x = 0.5x\)</span></td>
+<td align="left">\tfrac{2}{4}x = 0.5x</td>
+</tr>
+<tr>
+<td align="left">大型分数（不嵌套） Large (normal) fractions (force \displaystyle)</td>
+<td align="left"><span class="arithmatex">\(\dfrac{2}{4} = 0.5 \qquad \dfrac{2}{c + \dfrac{2}{d + \dfrac{2}{4}}} = a\)</span></td>
+<td align="left">\dfrac{2}{4} = 0.5 \qquad \dfrac{2}{c + \dfrac{2}{d + \dfrac{2}{4}}} = a</td>
+</tr>
+<tr>
+<td align="left">大型分数（嵌套） Large (nested) fractions</td>
+<td align="left"><span class="arithmatex">\(\cfrac{2}{c + \cfrac{2}{d + \cfrac{2}{4}}} = a\)</span></td>
+<td align="left">\cfrac{2}{c + \cfrac{2}{d + \cfrac{2}{4}}} = a</td>
+</tr>
+</tbody>
+</table>
+<h2 id="standard-numerical-functions">标准数值函数 Standard numerical functions</h2>
+<table>
+<thead>
+<tr>
+<th align="left">样式</th>
+<th align="left">LaTeX</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><span class="arithmatex">\(\exp_a b = a^b, \exp b = e^b, 10^m\)</span></td>
+<td align="left">\exp_a b = a^b, \exp b = e^b, 10^m</td>
+</tr>
+<tr>
+<td align="left"><span class="arithmatex">\(\ln c, \lg d = \log e, \log_{10} f\)</span></td>
+<td align="left">\ln c, \lg d = \log e, \log_{10} f</td>
+</tr>
+<tr>
+<td align="left"><span class="arithmatex">\(\sin a, \cos b, \tan c, \cot d, \sec e, \csc f\)</span></td>
+<td align="left">\sin a, \cos b, \tan c, \cot d, \sec e, \csc f</td>
+</tr>
+<tr>
+<td align="left"><span class="arithmatex">\(\arcsin a, \arccos b, \arctan c\)</span></td>
+<td align="left">\arcsin a, \arccos b, \arctan c</td>
+</tr>
+<tr>
+<td align="left"><span class="arithmatex">\(\operatorname{arccot} d, \operatorname{arcsec} e, \operatorname{arccsc} f\)</span></td>
+<td align="left">\operatorname{arccot} d, \operatorname{arcsec} e, \operatorname{arccsc} f</td>
+</tr>
+<tr>
+<td align="left"><span class="arithmatex">\(\sinh a, \cosh b, \tanh c, \coth d\)</span></td>
+<td align="left">\sinh a, \cosh b, \tanh c, \coth d</td>
+</tr>
+<tr>
+<td align="left"><span class="arithmatex">\(\operatorname{sh}k, \operatorname{ch}l, \operatorname{th}m, \operatorname{coth}n\)</span></td>
+<td align="left">\operatorname{sh}k, \operatorname{ch}l, \operatorname{th}m, \operatorname{coth}n</td>
+</tr>
+<tr>
+<td align="left"><span class="arithmatex">\(\operatorname{argsh}o, \operatorname{argch}p, \operatorname{argth}q\)</span></td>
+<td align="left">\operatorname{argsh}o, \operatorname{argch}p, \operatorname{argth}q</td>
+</tr>
+<tr>
+<td align="left"><span class="arithmatex">\(\operatorname{sgn}r, \left\vert s \right\vert\)</span></td>
+<td align="left">\operatorname{sgn}r, \left\vert s \right\vert</td>
+</tr>
+<tr>
+<td align="left"><span class="arithmatex">\(\min(x,y), \max(x,y)\)</span></td>
+<td align="left">\min(x,y), \max(x,y)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意：</strong>LaTeX和MathJax支持的操作符有限，如有特殊操作符，可以使用<code>\operatorname{}</code> 命令自定义，例如<code>\operatorname{mydefine}x</code>定义操作符<code>mydefine</code>：<span class="arithmatex">\(\operatorname{mydefine}x\)</span></p>
+<h2 id="radicals">根式 Radicals</h2>
+<table>
+<thead>
+<tr>
+<th align="left">样式</th>
+<th align="left">LaTeX</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><span class="arithmatex">\(\surd\)</span></td>
+<td align="left">\surd</td>
+</tr>
+<tr>
+<td align="left"><span class="arithmatex">\(\sqrt{\pi}\)</span></td>
+<td align="left">\sqrt{\pi}</td>
+</tr>
+<tr>
+<td align="left"><span class="arithmatex">\(\sqrt[n]{\pi}\)</span></td>
+<td align="left">\sqrt[n]{\pi}</td>
+</tr>
+<tr>
+<td align="left"><span class="arithmatex">\(\sqrt[3]{\frac{x^3+y^3}{2}}\)</span></td>
+<td align="left">\sqrt[3]{\frac{x^3+y^3}{2}</td>
+</tr>
+</tbody>
+</table>
+<h2 id="differentials-and-derivatives">微分与导数 Differentials and Derivatives</h2>
+<table>
+<thead>
+<tr>
+<th align="left">样式</th>
+<th align="left">LaTeX</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><span class="arithmatex">\(dt,dt,∂t,∇ψ\)</span></td>
+<td align="left">dt, \mathrm{d}t, \partial t, \nabla\psi</td>
+</tr>
+<tr>
+<td align="left"><span class="arithmatex">\(dy/dx, \mathrm{d}y/\mathrm{d}x, \frac{dy}{dx}, \frac{\mathrm{d}y}{\mathrm{d}x}, \frac{\partial^2}{\partial x_1\partial x_2}y\)</span></td>
+<td align="left">dy/dx, \mathrm{d}y/\mathrm{d}x, \frac{dy}{dx}, \frac{\mathrm{d}y}{\mathrm{d}x}, \frac{\partial^2}{\partial x_1\partial x_2}y</td>
+</tr>
+<tr>
+<td align="left"><span class="arithmatex">\(\prime, \backprime, f^\prime, f', f'', f^{(3)}, \dot y, \ddot y\)</span></td>
+<td align="left">\prime, \backprime, f^\prime, f', f'', f^{(3)}, \dot y, \ddot y</td>
+</tr>
+</tbody>
+</table>
+<h2 id="modular-arithmetic">同余与模算术 Modular arithmetic</h2>
+<table>
+<thead>
+<tr>
+<th align="left">样式</th>
+<th align="left">LaTeX</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><span class="arithmatex">\(s_k \equiv 0 \pmod{m}\)</span></td>
+<td align="left">s_k \equiv 0 \pmod{m}</td>
+</tr>
+<tr>
+<td align="left"><span class="arithmatex">\(a \bmod b\)</span></td>
+<td align="left">a \bmod b</td>
+</tr>
+<tr>
+<td align="left"><span class="arithmatex">\(\gcd(m, n), \operatorname{lcm}(m, n)\)</span></td>
+<td align="left">\gcd(m, n), \operatorname{lcm}(m, n)</td>
+</tr>
+<tr>
+<td align="left"><span class="arithmatex">\(\mid, \nmid, \shortmid, \nshortmid\)</span></td>
+<td align="left">\mid, \nmid, \shortmid, \nshortmid</td>
+</tr>
+</tbody>
+</table>
+<h2 id="limits">极限 Limits</h2>
+<table>
+<thead>
+<tr>
+<th align="left">样式</th>
+<th align="left">LaTeX</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><span class="arithmatex">\(\lim_{n \to \infty}x_n\)</span></td>
+<td align="left">\lim_{n \to \infty}x_n</td>
+</tr>
+<tr>
+<td align="left"><span class="arithmatex">\(\textstyle \lim_{n \to \infty}x_n\)</span></td>
+<td align="left">\textstyle \lim_{n \to \infty}x_n</td>
+</tr>
+</tbody>
+</table>
+<h2 id="bounds-and-projections">界限与投影 Bounds and Projections</h2>
+<table>
+<thead>
+<tr>
+<th align="left">样式</th>
+<th align="left">LaTeX</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><span class="arithmatex">\(\min x, \max y, \inf s, \sup t\)</span></td>
+<td align="left">\min x, \max y, \inf s, \sup t</td>
+</tr>
+<tr>
+<td align="left"><span class="arithmatex">\(\lim u, \liminf v, \limsup w\)</span></td>
+<td align="left">\lim u, \liminf v, \limsup w</td>
+</tr>
+<tr>
+<td align="left"><span class="arithmatex">\(\dim p, \deg q, \det m, \ker\phi\)</span></td>
+<td align="left">\dim p, \deg q, \det m, \ker\phi</td>
+</tr>
+<tr>
+<td align="left"><span class="arithmatex">\(\Pr j, \hom l, \lVert z \rVert, \arg z\)</span></td>
+<td align="left">\Pr j, \hom l, \lVert z \rVert, \arg z</td>
+</tr>
+</tbody>
+</table>
+<h2 id="integral">积分 Integral</h2>
+<table>
+<thead>
+<tr>
+<th align="left">样式</th>
+<th align="left">LaTeX</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><span class="arithmatex">\(\int\limits_{1}^{3}\frac{e^3/x}{x^2}\, dx\)</span></td>
+<td align="left">\int\limits_{1}^{3}\frac{e^3/x}{x^2}\, dx</td>
+</tr>
+<tr>
+<td align="left"><span class="arithmatex">\(\int_{1}^{3}\frac{e^3/x}{x^2}\, dx\)</span></td>
+<td align="left">\int_{1}^{3}\frac{e^3/x}{x^2}\, dx</td>
+</tr>
+<tr>
+<td align="left"><span class="arithmatex">\(\textstyle \int\limits_{-N}^{N} e^x dx\)</span></td>
+<td align="left">\textstyle \int\limits_{-N}^{N} e^x dx</td>
+</tr>
+<tr>
+<td align="left"><span class="arithmatex">\(\textstyle \int_{-N}^{N} e^x dx\)</span></td>
+<td align="left">\textstyle \int_{-N}^{N} e^x dx</td>
+</tr>
+<tr>
+<td align="left"><span class="arithmatex">\(\iint\limits_D dx\,dy\)</span></td>
+<td align="left">\iint\limits_D dx\,dy</td>
+</tr>
+<tr>
+<td align="left"><span class="arithmatex">\(\iiint\limits_E dx\,dy\,dz\)</span></td>
+<td align="left">\iiint\limits_E dx\,dy\,dz</td>
+</tr>
+<tr>
+<td align="left"><span class="arithmatex">\(\iiiint\limits_F dx\,dy\,dz\,dt\)</span></td>
+<td align="left">\iiiint\limits_F dx\,dy\,dz\,dt</td>
+</tr>
+<tr>
+<td align="left"><span class="arithmatex">\(\int_{(x,y)\in C} x^3\, dx + 4y^2\, dy\)</span></td>
+<td align="left">\int_{(x,y)\in C} x^3\, dx + 4y^2\, dy</td>
+</tr>
+<tr>
+<td align="left"><span class="arithmatex">\(\oint_{(x,y)\in C} x^3\, dx + 4y^2\, dy\)</span></td>
+<td align="left">\oint_{(x,y)\in C} x^3\, dx + 4y^2\, dy</td>
+</tr>
+</tbody>
+</table>
+<h2 id="large-operators">其他大型运算 Large operators</h2>
+<table>
+<thead>
+<tr>
+<th align="left">类别</th>
+<th align="left">样式</th>
+<th align="left">LaTeX</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">求和 Summation</td>
+<td align="left"><span class="arithmatex">\(\sum_{a}^{b}\)</span></td>
+<td align="left">\sum_{a}^{b}</td>
+</tr>
+<tr>
+<td align="left">求和 Summation</td>
+<td align="left"><span class="arithmatex">\(\textstyle \sum_{a}^{b}\)</span></td>
+<td align="left">\textstyle \sum_{a}^{b}</td>
+</tr>
+<tr>
+<td align="left">连乘积 Product</td>
+<td align="left"><span class="arithmatex">\(\prod_{a}^{b}\)</span></td>
+<td align="left">\prod_{a}^{b}</td>
+</tr>
+<tr>
+<td align="left">连乘积 Product</td>
+<td align="left"><span class="arithmatex">\(\textstyle \prod_{a}^{b}\)</span></td>
+<td align="left">\textstyle \prod_{a}^{b}</td>
+</tr>
+<tr>
+<td align="left">余积 Coproduct</td>
+<td align="left"><span class="arithmatex">\(\coprod_{a}^{b}\)</span></td>
+<td align="left">\coprod_{a}^{b}</td>
+</tr>
+<tr>
+<td align="left">余积 Coproduct</td>
+<td align="left"><span class="arithmatex">\(\textstyle \coprod_{a}^{b}\)</span></td>
+<td align="left">\textstyle \coprod_{a}^{b}</td>
+</tr>
+<tr>
+<td align="left">并集 Union</td>
+<td align="left"><span class="arithmatex">\(\bigcup_{a}^{b}\)</span></td>
+<td align="left">\bigcup_{a}^{b}</td>
+</tr>
+<tr>
+<td align="left">并集 Union</td>
+<td align="left"><span class="arithmatex">\(\textstyle \bigcup_{a}^{b}\)</span></td>
+<td align="left">\textstyle \bigcup_{a}^{b}</td>
+</tr>
+<tr>
+<td align="left">交集 Intersection</td>
+<td align="left"><span class="arithmatex">\(\bigcap_{a}^{b}\)</span></td>
+<td align="left">\bigcap_{a}^{b}</td>
+</tr>
+<tr>
+<td align="left">交集 Intersection</td>
+<td align="left"><span class="arithmatex">\(\textstyle \bigcap_{a}^{b}\)</span></td>
+<td align="left">\textstyle \bigcap_{a}^{b}</td>
+</tr>
+<tr>
+<td align="left">析取 Disjunction</td>
+<td align="left"><span class="arithmatex">\(\bigvee_{a}^{b}\)</span></td>
+<td align="left">\bigvee_{a}^{b}</td>
+</tr>
+<tr>
+<td align="left">析取 Disjunction</td>
+<td align="left"><span class="arithmatex">\(\textstyle \bigvee_{a}^{b}\)</span></td>
+<td align="left">\textstyle \bigvee_{a}^{b}</td>
+</tr>
+<tr>
+<td align="left">合取 Conjunction</td>
+<td align="left"><span class="arithmatex">\(\bigwedge_{a}^{b}\)</span></td>
+<td align="left">\bigwedge_{a}^{b}</td>
+</tr>
+<tr>
+<td align="left">合取 Conjunction</td>
+<td align="left"><span class="arithmatex">\(\textstyle \bigwedge_{a}^{b}\)</span></td>
+<td align="left">\textstyle \bigwedge_{a}^{b}</td>
+</tr>
+</tbody>
+</table>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../%E7%AC%A6%E5%8F%B7%E4%B8%8E%E5%AD%97%E6%AF%8D/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 符号与字母" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              符号与字母
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../github/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="md-footer__link md-footer__link--next" aria-label="Next: 常用命令" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              常用命令
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f89c2efe.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
